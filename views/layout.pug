@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    header
+      nav
+        a(href="/")
+          img#logo(src="/images/logo.png")
+        ul
+          li
+            a(href="/sign-up") Sign-up
+          li
+            a(href="/login") Log-in  
+      .search_nav
+        form(action="POST")
+          .input_wrapper 
+            label(for="destination") Destination
+            input(type="text" id = "destination" name= "destination" value="input name of your destination" required)      
+          .input_wrapper 
+            label(for="duration") Duration (Nights)
+            input(type="text" id = "duration" name= "duration" value="number of nights" required)
+          .input_wrapper 
+            label(for="departure-date") Departure Date
+            input(type="date" id = "departure-date" name= "dateOfDeparture" value="" required)
+          .input_wrapper 
+            label(for="numberOfGuest") Number of Guests
+            input(type="number" id = "numberOfGuest" name= "numberOfGuest" value="" required)          
+          .input_wrapper  
+            select(name="stars")
+              option(value="1") Min 1 star
+              option(value="2") Min 2 star
+              option(value="3") Min 3 star
+              option(value="4") Min 4 star
+              option(value="5") Min 5 star
+          .input_wrapper
+            select(name="sort")
+              option(value="1") Price : Low-High
+              option(value="-1") Price : High-Low    
+          .input_wrapper
+            button(type="submit") Search!
+
+      img(src="/images/beach.jpg")
+
+
+    block content
