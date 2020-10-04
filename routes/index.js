@@ -10,8 +10,11 @@ router.get('/all',hotelController.listAllHotels )
 
 // admin routes 
 
-router.get('/admin', )
+router.get('/admin',hotelController.adminPage )
 
+router.get('/admin/add',hotelController.createHotelGet )
+
+router.post('/admin/add',hotelController.createHotelPost )
 
 
 

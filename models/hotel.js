@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 let hotelSchema = new mongoose.Schema({
-    hotelName : {
+    hotel_Name : {
         type : String ,
         required : 'Hotel name is required',
         max : 32 , 
